@@ -138,7 +138,19 @@ class StubModel:
         return Handler
 
     def _record(self, path: str, body: dict, kind: str, blocks: list[dict] | None) -> None:
+        tool_results = []
+        for msg in body.get("messages") or []:
+            content = msg.get("content")
+            if not isinstance(content, list):
+                continue
+            for b in content:
+                if isinstance(b, dict) and b.get("type") == "tool_result":
+                    inner = b.get("content")
+                    if isinstance(inner, list):
+                        inner = "".join(x.get("text", "") for x in inner if isinstance(x, dict))
+                    tool_results.append({"is_error": bool(b.get("is_error")), "content": str(inner)[:2000]})
         with self.lock:
             self.log.append({"path": path, "kind": kind, "model": body.get("model"), "stream": bool(body.get("stream")),
                              "tools": [t.get("name") for t in body.get("tools") or [] if isinstance(t, dict)],
-                             "n_messages": len(body.get("messages") or []), "answered": blocks})
+                             "n_messages": len(body.get("messages") or []), "tool_results": tool_results,
+                             "answered": blocks})
