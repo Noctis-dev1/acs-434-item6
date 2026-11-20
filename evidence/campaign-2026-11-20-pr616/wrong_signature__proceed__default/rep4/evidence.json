@@ -1,0 +1,566 @@
+{
+ "config": {
+  "fault": "wrong_signature",
+  "on_decision_failure": "proceed",
+  "wiring": "default",
+  "rep": 4
+ },
+ "wire": {
+  "cmd": [
+   "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/.venv/bin/acs-claude-code-wire",
+   "--guardian-url",
+   "http://127.0.0.1:51044/acs",
+   "--secret-file",
+   "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/hmac.secret",
+   "--key-id",
+   "test-key",
+   "--settings",
+   "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/work/.claude/settings.json",
+   "--audit-file",
+   "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/audit.jsonl",
+   "--hook-command",
+   "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/.venv/bin/acs-claude-code-hook",
+   "--write"
+  ],
+  "rc": 0,
+  "stderr_tail": ""
+ },
+ "settings_json": {
+  "hooks": {
+   "SessionStart": [
+    {
+     "matcher": "*",
+     "hooks": [
+      {
+       "type": "command",
+       "command": "ACS_GUARDIAN_URL=http://127.0.0.1:51044/acs ACS_HMAC_SECRET_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/hmac.secret ACS_HMAC_KEY_ID=test-key ACS_AUDIT_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/audit.jsonl /private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/.venv/bin/acs-claude-code-hook # acs-adapter-wired"
+      }
+     ]
+    }
+   ],
+   "UserPromptSubmit": [
+    {
+     "matcher": "*",
+     "hooks": [
+      {
+       "type": "command",
+       "command": "ACS_GUARDIAN_URL=http://127.0.0.1:51044/acs ACS_HMAC_SECRET_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/hmac.secret ACS_HMAC_KEY_ID=test-key ACS_DEFAULT_DENY=1 ACS_AUDIT_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/audit.jsonl /private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/.venv/bin/acs-claude-code-hook # acs-adapter-wired",
+       "onFailure": "block"
+      }
+     ]
+    }
+   ],
+   "PreToolUse": [
+    {
+     "matcher": "*",
+     "hooks": [
+      {
+       "type": "command",
+       "command": "ACS_GUARDIAN_URL=http://127.0.0.1:51044/acs ACS_HMAC_SECRET_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/hmac.secret ACS_HMAC_KEY_ID=test-key ACS_DEFAULT_DENY=1 ACS_AUDIT_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/audit.jsonl /private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/.venv/bin/acs-claude-code-hook # acs-adapter-wired",
+       "onFailure": "block"
+      }
+     ]
+    }
+   ],
+   "PostToolUse": [
+    {
+     "matcher": "*",
+     "hooks": [
+      {
+       "type": "command",
+       "command": "ACS_GUARDIAN_URL=http://127.0.0.1:51044/acs ACS_HMAC_SECRET_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/hmac.secret ACS_HMAC_KEY_ID=test-key ACS_AUDIT_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/audit.jsonl /private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/.venv/bin/acs-claude-code-hook # acs-adapter-wired"
+      }
+     ]
+    }
+   ],
+   "PostToolUseFailure": [
+    {
+     "matcher": "*",
+     "hooks": [
+      {
+       "type": "command",
+       "command": "ACS_GUARDIAN_URL=http://127.0.0.1:51044/acs ACS_HMAC_SECRET_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/hmac.secret ACS_HMAC_KEY_ID=test-key ACS_AUDIT_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/audit.jsonl /private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/.venv/bin/acs-claude-code-hook # acs-adapter-wired"
+      }
+     ]
+    }
+   ],
+   "SessionEnd": [
+    {
+     "matcher": "*",
+     "hooks": [
+      {
+       "type": "command",
+       "command": "ACS_GUARDIAN_URL=http://127.0.0.1:51044/acs ACS_HMAC_SECRET_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/hmac.secret ACS_HMAC_KEY_ID=test-key ACS_AUDIT_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/audit.jsonl /private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/.venv/bin/acs-claude-code-hook # acs-adapter-wired",
+       "timeout": 15
+      }
+     ]
+    }
+   ],
+   "Stop": [
+    {
+     "matcher": "*",
+     "hooks": [
+      {
+       "type": "command",
+       "command": "ACS_GUARDIAN_URL=http://127.0.0.1:51044/acs ACS_HMAC_SECRET_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/hmac.secret ACS_HMAC_KEY_ID=test-key ACS_AUDIT_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/audit.jsonl /private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/.venv/bin/acs-claude-code-hook # acs-adapter-wired"
+      }
+     ]
+    }
+   ],
+   "StopFailure": [
+    {
+     "matcher": "*",
+     "hooks": [
+      {
+       "type": "command",
+       "command": "ACS_GUARDIAN_URL=http://127.0.0.1:51044/acs ACS_HMAC_SECRET_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/hmac.secret ACS_HMAC_KEY_ID=test-key ACS_AUDIT_FILE=/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/audit.jsonl /private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/.venv/bin/acs-claude-code-hook # acs-adapter-wired"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "claude": {
+  "cmd": [
+   "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/tools/node_modules/.bin/claude",
+   "--print",
+   "--permission-mode",
+   "acceptEdits",
+   "Write the probe file."
+  ],
+  "rc": 0,
+  "timed_out": false,
+  "stdout": "Done.\n",
+  "stderr": ""
+ },
+ "guardian_exchanges": [
+  {
+   "request_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICJkMzgxOTNlNy1lNzFjLTQzZjgtYjU0Ni0zZGFlNmIwNTM0ZWUiLCAibWV0aG9kIjogImhhbmRzaGFrZS9oZWxsbyIsICJwYXJhbXMiOiB7ImFjc192ZXJzaW9uIjogIjAuMS4wIiwgInJlcXVlc3RfaWQiOiAiZDdiZDAzNjQtOGM5ZC00NWM0LWFmZTUtZjEyY2Y4MDJiN2MxIiwgInRpbWVzdGFtcCI6ICIyMDI2LTExLTIwVDA3OjE3OjIxLjI4NVoiLCAibWV0YWRhdGEiOiB7ImFnZW50X2lkIjogImNsYXVkZS1jb2RlOmE1MzYzM2MxIiwgInNlc3Npb25faWQiOiAiYjVmMThiNzktNjZiYi00MDI5LWEwNmUtNDM4MzNjZGJjYzZkIiwgInBsYXRmb3JtIjogImNsYXVkZS1jb2RlIn0sICJwYXlsb2FkIjogeyJhY3NfdmVyc2lvbnNfc3VwcG9ydGVkIjogWyIwLjEuMCJdLCAibWV0aG9kc19pbXBsZW1lbnRlZCI6IFsic3RlcHMvc2Vzc2lvblN0YXJ0IiwgInN0ZXBzL3Nlc3Npb25FbmQiLCAic3RlcHMvdXNlck1lc3NhZ2UiLCAic3RlcHMvdG9vbENhbGxSZXF1ZXN0IiwgInN0ZXBzL3Rvb2xDYWxsUmVzdWx0IiwgInN0ZXBzL3Rvb2xDYWxsUmVzdWx0IiwgInN0ZXBzL3R1cm5FbmQiLCAic3RlcHMvdHVybkVuZCIsICJzdGVwcy9zdWJhZ2VudFN0YXJ0IiwgInN0ZXBzL3R1cm5TdGFydCIsICJzdGVwcy9hZ2VudFJlc3BvbnNlIl0sICJ0cmFuc3BvcnRzX3N1cHBvcnRlZCI6IFsiaHR0cCJdLCAibWF4X3BheWxvYWRfc2l6ZV9ieXRlcyI6IDEwNDg1NzYsICJwcm92ZW5hbmNlX3Byb2R1Y2VyIjogIm5vbmUiLCAid3JhcHBlZF9wcm90b2NvbHMiOiBbXSwgInByb2ZpbGVzX3N1cHBvcnRlZCI6IFsiYWNzLWNvcmUiXSwgInNpZ25hdHVyZV9hbGdvcml0aG1zX3N1cHBvcnRlZCI6IFsiSE1BQy1TSEEyNTYiXX0sICJzaWduYXR1cmUiOiB7ImFsZ29yaXRobSI6ICJITUFDLVNIQTI1NiIsICJ2YWx1ZSI6ICJUZDdJdk4wdFQwUFNKQ2ZDZDE0d201NWJtdGxJR3EvdDVWS0tucDcvakNFPSIsICJrZXlfaWQiOiAidGVzdC1rZXkifX19",
+   "request": {
+    "jsonrpc": "2.0",
+    "id": "d38193e7-e71c-43f8-b546-3dae6b0534ee",
+    "method": "handshake/hello",
+    "params": {
+     "acs_version": "0.1.0",
+     "request_id": "d7bd0364-8c9d-45c4-afe5-f12cf802b7c1",
+     "timestamp": "2026-11-20T07:17:21.285Z",
+     "metadata": {
+      "agent_id": "claude-code:a53633c1",
+      "session_id": "b5f18b79-66bb-4029-a06e-43833cdbcc6d",
+      "platform": "claude-code"
+     },
+     "payload": {
+      "acs_versions_supported": [
+       "0.1.0"
+      ],
+      "methods_implemented": [
+       "steps/sessionStart",
+       "steps/sessionEnd",
+       "steps/userMessage",
+       "steps/toolCallRequest",
+       "steps/toolCallResult",
+       "steps/toolCallResult",
+       "steps/turnEnd",
+       "steps/turnEnd",
+       "steps/subagentStart",
+       "steps/turnStart",
+       "steps/agentResponse"
+      ],
+      "transports_supported": [
+       "http"
+      ],
+      "max_payload_size_bytes": 1048576,
+      "provenance_producer": "none",
+      "wrapped_protocols": [],
+      "profiles_supported": [
+       "acs-core"
+      ],
+      "signature_algorithms_supported": [
+       "HMAC-SHA256"
+      ]
+     },
+     "signature": {
+      "algorithm": "HMAC-SHA256",
+      "value": "Td7IvN0tT0PSJCfCd14wm55bmtlIGq/t5VKKnp7/jCE=",
+      "key_id": "test-key"
+     }
+    }
+   },
+   "request_signature_valid": true,
+   "method": "handshake/hello",
+   "fault_applied": null,
+   "response_status": 200,
+   "response_content_type": "application/json",
+   "response_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICJkMzgxOTNlNy1lNzFjLTQzZjgtYjU0Ni0zZGFlNmIwNTM0ZWUiLCAicmVzdWx0IjogeyJuZWdvdGlhdGVkX3ZlcnNpb24iOiAiMC4xLjAiLCAibWV0aG9kc19ldmFsdWF0ZWQiOiBbInN0ZXBzL3Nlc3Npb25TdGFydCIsICJzdGVwcy9zZXNzaW9uRW5kIiwgInN0ZXBzL3VzZXJNZXNzYWdlIiwgInN0ZXBzL3Rvb2xDYWxsUmVxdWVzdCIsICJzdGVwcy90b29sQ2FsbFJlc3VsdCIsICJzdGVwcy90b29sQ2FsbFJlc3VsdCIsICJzdGVwcy90dXJuRW5kIiwgInN0ZXBzL3R1cm5FbmQiLCAic3RlcHMvc3ViYWdlbnRTdGFydCIsICJzdGVwcy90dXJuU3RhcnQiLCAic3RlcHMvYWdlbnRSZXNwb25zZSJdLCAic2VsZWN0ZWRfdHJhbnNwb3J0IjogImh0dHAiLCAic2lnbmF0dXJlX2FsZ29yaXRobXNfc3VwcG9ydGVkIjogWyJITUFDLVNIQTI1NiJdLCAidGltZW91dF9jb25maWciOiB7ImRlZmF1bHRfbXMiOiA1MDAwfSwgInNrZXdfd2luZG93X21zIjogMzAwMDAwLCAib25fZGVjaXNpb25fZmFpbHVyZSI6ICJwcm9jZWVkIiwgInByb2ZpbGVzX2FjY2VwdGVkIjogWyJhY3MtY29yZSJdLCAic2lnbmF0dXJlIjogeyJhbGdvcml0aG0iOiAiSE1BQy1TSEEyNTYiLCAidmFsdWUiOiAiSVlxd1hPakJnSlpvZkszS25vNGkzWGFkVFJ0c3k4UmVzajdKZmJkdElEST0iLCAia2V5X2lkIjogInRlc3Qta2V5In19fQ=="
+  },
+  {
+   "request_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICJkYWY3NTBlOC1kMzA2LTRhMTQtYWEzZi1jNTc1MGNkZTI0NzMiLCAibWV0aG9kIjogInN0ZXBzL3Nlc3Npb25TdGFydCIsICJwYXJhbXMiOiB7ImFjc192ZXJzaW9uIjogIjAuMS4wIiwgInJlcXVlc3RfaWQiOiAiMDRiZjZiNDMtMWJjZi00NzdlLTg2NzgtYWIzYWY0NjZjNDNjIiwgInRpbWVzdGFtcCI6ICIyMDI2LTExLTIwVDA3OjE3OjIxLjMzN1oiLCAibWV0YWRhdGEiOiB7ImFnZW50X2lkIjogImNsYXVkZS1jb2RlOmE1MzYzM2MxIiwgInNlc3Npb25faWQiOiAiYjVmMThiNzktNjZiYi00MDI5LWEwNmUtNDM4MzNjZGJjYzZkIiwgInBsYXRmb3JtIjogImNsYXVkZS1jb2RlIiwgImFkYXB0ZXJfdmVyc2lvbiI6ICIwLjIuMCIsICJjd2QiOiAiL3ByaXZhdGUvdG1wL2NsYXVkZS01MDEvLVVzZXJzLW1jaGlpLzFjNmM1NDNiLTdkYzAtNGYyYS1iYTMzLTA0NjA3YWE0Njg3MC9zY3JhdGNocGFkL3JlcnVuNDM0L3J1bnMvY2FtcGFpZ24tMjAyNi0xMS0yMC1wcjYxNi93cm9uZ19zaWduYXR1cmVfX3Byb2NlZWRfX2RlZmF1bHQvcmVwNC93b3JrIiwgInRyYW5zY3JpcHRfcGF0aCI6ICIvcHJpdmF0ZS90bXAvY2xhdWRlLTUwMS8tVXNlcnMtbWNoaWkvMWM2YzU0M2ItN2RjMC00ZjJhLWJhMzMtMDQ2MDdhYTQ2ODcwL3NjcmF0Y2hwYWQvcmVydW40MzQvcnVucy9jYW1wYWlnbi0yMDI2LTExLTIwLXByNjE2L3dyb25nX3NpZ25hdHVyZV9fcHJvY2VlZF9fZGVmYXVsdC9yZXA0L2hvbWUvLmNsYXVkZS9wcm9qZWN0cy8tcHJpdmF0ZS10bXAtY2xhdWRlLTUwMS0tVXNlcnMtbWNoaWktMWM2YzU0M2ItN2RjMC00ZjJhLWJhMzMtMDQ2MDdhYTQ2ODcwLXNjcmF0Y2hwYWQtcmVydW40MzQtcnVucy1jYW1wYWlnbi0yMDI2LTExLTIwLXByNjE2LXdyb25nLXNpZ25hdHVyZS0tcHJvY2VlZC0tZGVmYXVsdC1yZXA0LXdvcmsvYjVmMThiNzktNjZiYi00MDI5LWEwNmUtNDM4MzNjZGJjYzZkLmpzb25sIn0sICJwYXlsb2FkIjogeyJwbGF0Zm9ybV9jb250ZXh0IjogeyJzb3VyY2UiOiAic3RhcnR1cCIsICJ0cmFuc2NyaXB0X3BhdGgiOiAiL3ByaXZhdGUvdG1wL2NsYXVkZS01MDEvLVVzZXJzLW1jaGlpLzFjNmM1NDNiLTdkYzAtNGYyYS1iYTMzLTA0NjA3YWE0Njg3MC9zY3JhdGNocGFkL3JlcnVuNDM0L3J1bnMvY2FtcGFpZ24tMjAyNi0xMS0yMC1wcjYxNi93cm9uZ19zaWduYXR1cmVfX3Byb2NlZWRfX2RlZmF1bHQvcmVwNC9ob21lLy5jbGF1ZGUvcHJvamVjdHMvLXByaXZhdGUtdG1wLWNsYXVkZS01MDEtLVVzZXJzLW1jaGlpLTFjNmM1NDNiLTdkYzAtNGYyYS1iYTMzLTA0NjA3YWE0Njg3MC1zY3JhdGNocGFkLXJlcnVuNDM0LXJ1bnMtY2FtcGFpZ24tMjAyNi0xMS0yMC1wcjYxNi13cm9uZy1zaWduYXR1cmUtLXByb2NlZWQtLWRlZmF1bHQtcmVwNC13b3JrL2I1ZjE4Yjc5LTY2YmItNDAyOS1hMDZlLTQzODMzY2RiY2M2ZC5qc29ubCJ9fSwgInNpZ25hdHVyZSI6IHsiYWxnb3JpdGhtIjogIkhNQUMtU0hBMjU2IiwgInZhbHVlIjogImc0dHk4OHpESHBpOW9rWENReHo0eG5Md2t5UG1md2t2SndteGpidnFhVW89IiwgImtleV9pZCI6ICJ0ZXN0LWtleSJ9fX0=",
+   "request": {
+    "jsonrpc": "2.0",
+    "id": "daf750e8-d306-4a14-aa3f-c5750cde2473",
+    "method": "steps/sessionStart",
+    "params": {
+     "acs_version": "0.1.0",
+     "request_id": "04bf6b43-1bcf-477e-8678-ab3af466c43c",
+     "timestamp": "2026-11-20T07:17:21.337Z",
+     "metadata": {
+      "agent_id": "claude-code:a53633c1",
+      "session_id": "b5f18b79-66bb-4029-a06e-43833cdbcc6d",
+      "platform": "claude-code",
+      "adapter_version": "0.2.0",
+      "cwd": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/work",
+      "transcript_path": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/home/.claude/projects/-private-tmp-claude-501--Users-mchii-1c6c543b-7dc0-4f2a-ba33-04607aa46870-scratchpad-rerun434-runs-campaign-2026-11-20-pr616-wrong-signature--proceed--default-rep4-work/b5f18b79-66bb-4029-a06e-43833cdbcc6d.jsonl"
+     },
+     "payload": {
+      "platform_context": {
+       "source": "startup",
+       "transcript_path": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/home/.claude/projects/-private-tmp-claude-501--Users-mchii-1c6c543b-7dc0-4f2a-ba33-04607aa46870-scratchpad-rerun434-runs-campaign-2026-11-20-pr616-wrong-signature--proceed--default-rep4-work/b5f18b79-66bb-4029-a06e-43833cdbcc6d.jsonl"
+      }
+     },
+     "signature": {
+      "algorithm": "HMAC-SHA256",
+      "value": "g4ty88zDHpi9okXCQxz4xnLwkyPmfwkvJwmxjbvqaUo=",
+      "key_id": "test-key"
+     }
+    }
+   },
+   "request_signature_valid": true,
+   "method": "steps/sessionStart",
+   "fault_applied": null,
+   "response_status": 200,
+   "response_content_type": "application/json",
+   "response_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICJkYWY3NTBlOC1kMzA2LTRhMTQtYWEzZi1jNTc1MGNkZTI0NzMiLCAicmVzdWx0IjogeyJ0eXBlIjogImZpbmFsIiwgImFjc192ZXJzaW9uIjogIjAuMS4wIiwgInJlcXVlc3RfaWQiOiAiMDRiZjZiNDMtMWJjZi00NzdlLTg2NzgtYWIzYWY0NjZjNDNjIiwgImRlY2lzaW9uIjogImFsbG93IiwgImNoYWluX2hhc2giOiAiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsICJzaWduYXR1cmUiOiB7ImFsZ29yaXRobSI6ICJITUFDLVNIQTI1NiIsICJ2YWx1ZSI6ICJHODNuTGFpd0txbkJnVTNrRDY5VEtsQ1RLRVBaUXltNi9xUXExZkZiMjRJPSIsICJrZXlfaWQiOiAidGVzdC1rZXkifX19"
+  },
+  {
+   "request_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICIxMzI5ZTNlMy0zNTkxLTQ3MDYtYjZmZi01N2I4NTM0YzBkNDkiLCAibWV0aG9kIjogInN0ZXBzL3R1cm5TdGFydCIsICJwYXJhbXMiOiB7ImFjc192ZXJzaW9uIjogIjAuMS4wIiwgInJlcXVlc3RfaWQiOiAiZGQwZTFkZTYtNGNkNS00NzE1LTkwMGItY2U5NTIzZjc1NmNiIiwgInRpbWVzdGFtcCI6ICIyMDI2LTExLTIwVDA3OjE3OjIxLjQzN1oiLCAibWV0YWRhdGEiOiB7ImFnZW50X2lkIjogImNsYXVkZS1jb2RlOmE1MzYzM2MxIiwgInNlc3Npb25faWQiOiAiYjVmMThiNzktNjZiYi00MDI5LWEwNmUtNDM4MzNjZGJjYzZkIiwgInBsYXRmb3JtIjogImNsYXVkZS1jb2RlIiwgImFkYXB0ZXJfdmVyc2lvbiI6ICIwLjIuMCIsICJjd2QiOiAiL3ByaXZhdGUvdG1wL2NsYXVkZS01MDEvLVVzZXJzLW1jaGlpLzFjNmM1NDNiLTdkYzAtNGYyYS1iYTMzLTA0NjA3YWE0Njg3MC9zY3JhdGNocGFkL3JlcnVuNDM0L3J1bnMvY2FtcGFpZ24tMjAyNi0xMS0yMC1wcjYxNi93cm9uZ19zaWduYXR1cmVfX3Byb2NlZWRfX2RlZmF1bHQvcmVwNC93b3JrIiwgInRyYW5zY3JpcHRfcGF0aCI6ICIvcHJpdmF0ZS90bXAvY2xhdWRlLTUwMS8tVXNlcnMtbWNoaWkvMWM2YzU0M2ItN2RjMC00ZjJhLWJhMzMtMDQ2MDdhYTQ2ODcwL3NjcmF0Y2hwYWQvcmVydW40MzQvcnVucy9jYW1wYWlnbi0yMDI2LTExLTIwLXByNjE2L3dyb25nX3NpZ25hdHVyZV9fcHJvY2VlZF9fZGVmYXVsdC9yZXA0L2hvbWUvLmNsYXVkZS9wcm9qZWN0cy8tcHJpdmF0ZS10bXAtY2xhdWRlLTUwMS0tVXNlcnMtbWNoaWktMWM2YzU0M2ItN2RjMC00ZjJhLWJhMzMtMDQ2MDdhYTQ2ODcwLXNjcmF0Y2hwYWQtcmVydW40MzQtcnVucy1jYW1wYWlnbi0yMDI2LTExLTIwLXByNjE2LXdyb25nLXNpZ25hdHVyZS0tcHJvY2VlZC0tZGVmYXVsdC1yZXA0LXdvcmsvYjVmMThiNzktNjZiYi00MDI5LWEwNmUtNDM4MzNjZGJjYzZkLmpzb25sIiwgInBlcm1pc3Npb25fbW9kZSI6ICJhY2NlcHRFZGl0cyIsICJ0dXJuX2lkIjogImRkMGUxZGU2LTRjZDUtNDcxNS05MDBiLWNlOTUyM2Y3NTZjYiJ9LCAicGF5bG9hZCI6IHsidHVybl9pZCI6ICJkZDBlMWRlNi00Y2Q1LTQ3MTUtOTAwYi1jZTk1MjNmNzU2Y2IiLCAidHJpZ2dlcmVkX2J5IjogInVzZXJfbWVzc2FnZSJ9LCAic2lnbmF0dXJlIjogeyJhbGdvcml0aG0iOiAiSE1BQy1TSEEyNTYiLCAidmFsdWUiOiAidXlHR0VpYjJrQW1EanRJcVFtTzJRSVNWbjNQc01ZZTRoMEF2VHJmSHBnaz0iLCAia2V5X2lkIjogInRlc3Qta2V5In19fQ==",
+   "request": {
+    "jsonrpc": "2.0",
+    "id": "1329e3e3-3591-4706-b6ff-57b8534c0d49",
+    "method": "steps/turnStart",
+    "params": {
+     "acs_version": "0.1.0",
+     "request_id": "dd0e1de6-4cd5-4715-900b-ce9523f756cb",
+     "timestamp": "2026-11-20T07:17:21.437Z",
+     "metadata": {
+      "agent_id": "claude-code:a53633c1",
+      "session_id": "b5f18b79-66bb-4029-a06e-43833cdbcc6d",
+      "platform": "claude-code",
+      "adapter_version": "0.2.0",
+      "cwd": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/work",
+      "transcript_path": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/home/.claude/projects/-private-tmp-claude-501--Users-mchii-1c6c543b-7dc0-4f2a-ba33-04607aa46870-scratchpad-rerun434-runs-campaign-2026-11-20-pr616-wrong-signature--proceed--default-rep4-work/b5f18b79-66bb-4029-a06e-43833cdbcc6d.jsonl",
+      "permission_mode": "acceptEdits",
+      "turn_id": "dd0e1de6-4cd5-4715-900b-ce9523f756cb"
+     },
+     "payload": {
+      "turn_id": "dd0e1de6-4cd5-4715-900b-ce9523f756cb",
+      "triggered_by": "user_message"
+     },
+     "signature": {
+      "algorithm": "HMAC-SHA256",
+      "value": "uyGGEib2kAmDjtIqQmO2QISVn3PsMYe4h0AvTrfHpgk=",
+      "key_id": "test-key"
+     }
+    }
+   },
+   "request_signature_valid": true,
+   "method": "steps/turnStart",
+   "fault_applied": null,
+   "response_status": 200,
+   "response_content_type": "application/json",
+   "response_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICIxMzI5ZTNlMy0zNTkxLTQ3MDYtYjZmZi01N2I4NTM0YzBkNDkiLCAicmVzdWx0IjogeyJ0eXBlIjogImZpbmFsIiwgImFjc192ZXJzaW9uIjogIjAuMS4wIiwgInJlcXVlc3RfaWQiOiAiZGQwZTFkZTYtNGNkNS00NzE1LTkwMGItY2U5NTIzZjc1NmNiIiwgImRlY2lzaW9uIjogImFsbG93IiwgImNoYWluX2hhc2giOiAiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsICJzaWduYXR1cmUiOiB7ImFsZ29yaXRobSI6ICJITUFDLVNIQTI1NiIsICJ2YWx1ZSI6ICJJU24vYVVDb0p2ZW5pNnpSVFlMY1R0RjJFNVlVQ3FsVXJoL2R6ZWxzVm1ZPSIsICJrZXlfaWQiOiAidGVzdC1rZXkifX19"
+  },
+  {
+   "request_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICI2MGVlMTU1Zi05YzZhLTQ1OTktYTliYS0xYWM2N2ZkNGEyZTgiLCAibWV0aG9kIjogInN0ZXBzL3VzZXJNZXNzYWdlIiwgInBhcmFtcyI6IHsiYWNzX3ZlcnNpb24iOiAiMC4xLjAiLCAicmVxdWVzdF9pZCI6ICJkZDA3MGMzYy02MTE3LTQzNDAtOTZhMC1lOWU2MDQ3OGM5YjAiLCAidGltZXN0YW1wIjogIjIwMjYtMTEtMjBUMDc6MTc6MjEuNDg2WiIsICJtZXRhZGF0YSI6IHsiYWdlbnRfaWQiOiAiY2xhdWRlLWNvZGU6YTUzNjMzYzEiLCAic2Vzc2lvbl9pZCI6ICJiNWYxOGI3OS02NmJiLTQwMjktYTA2ZS00MzgzM2NkYmNjNmQiLCAicGxhdGZvcm0iOiAiY2xhdWRlLWNvZGUiLCAiYWRhcHRlcl92ZXJzaW9uIjogIjAuMi4wIiwgImN3ZCI6ICIvcHJpdmF0ZS90bXAvY2xhdWRlLTUwMS8tVXNlcnMtbWNoaWkvMWM2YzU0M2ItN2RjMC00ZjJhLWJhMzMtMDQ2MDdhYTQ2ODcwL3NjcmF0Y2hwYWQvcmVydW40MzQvcnVucy9jYW1wYWlnbi0yMDI2LTExLTIwLXByNjE2L3dyb25nX3NpZ25hdHVyZV9fcHJvY2VlZF9fZGVmYXVsdC9yZXA0L3dvcmsiLCAidHJhbnNjcmlwdF9wYXRoIjogIi9wcml2YXRlL3RtcC9jbGF1ZGUtNTAxLy1Vc2Vycy1tY2hpaS8xYzZjNTQzYi03ZGMwLTRmMmEtYmEzMy0wNDYwN2FhNDY4NzAvc2NyYXRjaHBhZC9yZXJ1bjQzNC9ydW5zL2NhbXBhaWduLTIwMjYtMTEtMjAtcHI2MTYvd3Jvbmdfc2lnbmF0dXJlX19wcm9jZWVkX19kZWZhdWx0L3JlcDQvaG9tZS8uY2xhdWRlL3Byb2plY3RzLy1wcml2YXRlLXRtcC1jbGF1ZGUtNTAxLS1Vc2Vycy1tY2hpaS0xYzZjNTQzYi03ZGMwLTRmMmEtYmEzMy0wNDYwN2FhNDY4NzAtc2NyYXRjaHBhZC1yZXJ1bjQzNC1ydW5zLWNhbXBhaWduLTIwMjYtMTEtMjAtcHI2MTYtd3Jvbmctc2lnbmF0dXJlLS1wcm9jZWVkLS1kZWZhdWx0LXJlcDQtd29yay9iNWYxOGI3OS02NmJiLTQwMjktYTA2ZS00MzgzM2NkYmNjNmQuanNvbmwiLCAicGVybWlzc2lvbl9tb2RlIjogImFjY2VwdEVkaXRzIiwgInR1cm5faWQiOiAiZGQwZTFkZTYtNGNkNS00NzE1LTkwMGItY2U5NTIzZjc1NmNiIn0sICJwYXlsb2FkIjogeyJjb250ZW50IjogW3sidHlwZSI6ICJ0ZXh0IiwgInZhbHVlIjogIldyaXRlIHRoZSBwcm9iZSBmaWxlLiJ9XX0sICJzaWduYXR1cmUiOiB7ImFsZ29yaXRobSI6ICJITUFDLVNIQTI1NiIsICJ2YWx1ZSI6ICJtZkRBY0c0c0xrL1ZRZDVqZ0hiVzVqLzkwcmE1MmViQ0gvbENHenprdFVJPSIsICJrZXlfaWQiOiAidGVzdC1rZXkifX19",
+   "request": {
+    "jsonrpc": "2.0",
+    "id": "60ee155f-9c6a-4599-a9ba-1ac67fd4a2e8",
+    "method": "steps/userMessage",
+    "params": {
+     "acs_version": "0.1.0",
+     "request_id": "dd070c3c-6117-4340-96a0-e9e60478c9b0",
+     "timestamp": "2026-11-20T07:17:21.486Z",
+     "metadata": {
+      "agent_id": "claude-code:a53633c1",
+      "session_id": "b5f18b79-66bb-4029-a06e-43833cdbcc6d",
+      "platform": "claude-code",
+      "adapter_version": "0.2.0",
+      "cwd": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/work",
+      "transcript_path": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/home/.claude/projects/-private-tmp-claude-501--Users-mchii-1c6c543b-7dc0-4f2a-ba33-04607aa46870-scratchpad-rerun434-runs-campaign-2026-11-20-pr616-wrong-signature--proceed--default-rep4-work/b5f18b79-66bb-4029-a06e-43833cdbcc6d.jsonl",
+      "permission_mode": "acceptEdits",
+      "turn_id": "dd0e1de6-4cd5-4715-900b-ce9523f756cb"
+     },
+     "payload": {
+      "content": [
+       {
+        "type": "text",
+        "value": "Write the probe file."
+       }
+      ]
+     },
+     "signature": {
+      "algorithm": "HMAC-SHA256",
+      "value": "mfDAcG4sLk/VQd5jgHbW5j/90ra52ebCH/lCGzzktUI=",
+      "key_id": "test-key"
+     }
+    }
+   },
+   "request_signature_valid": true,
+   "method": "steps/userMessage",
+   "fault_applied": null,
+   "response_status": 200,
+   "response_content_type": "application/json",
+   "response_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICI2MGVlMTU1Zi05YzZhLTQ1OTktYTliYS0xYWM2N2ZkNGEyZTgiLCAicmVzdWx0IjogeyJ0eXBlIjogImZpbmFsIiwgImFjc192ZXJzaW9uIjogIjAuMS4wIiwgInJlcXVlc3RfaWQiOiAiZGQwNzBjM2MtNjExNy00MzQwLTk2YTAtZTllNjA0NzhjOWIwIiwgImRlY2lzaW9uIjogImFsbG93IiwgImNoYWluX2hhc2giOiAiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsICJzaWduYXR1cmUiOiB7ImFsZ29yaXRobSI6ICJITUFDLVNIQTI1NiIsICJ2YWx1ZSI6ICJMelA4UGkrSEFEZWpwR2dyN0J6RjdTM3lheXlTUjhUbzFmdzNMdTJGRTFBPSIsICJrZXlfaWQiOiAidGVzdC1rZXkifX19"
+  },
+  {
+   "request_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICJjOTA3ZjA3MS1kZDI3LTRkN2EtYmVlYS0zZWZlYmJlYTFiYWYiLCAibWV0aG9kIjogInN0ZXBzL3Rvb2xDYWxsUmVxdWVzdCIsICJwYXJhbXMiOiB7ImFjc192ZXJzaW9uIjogIjAuMS4wIiwgInJlcXVlc3RfaWQiOiAiZDQyMWJlMzgtZTdkYS01NjlhLWEwNDgtMmZlYmNhZGU5MmYwIiwgInRpbWVzdGFtcCI6ICIyMDI2LTExLTIwVDA3OjE3OjIxLjU4OFoiLCAibWV0YWRhdGEiOiB7ImFnZW50X2lkIjogImNsYXVkZS1jb2RlOmE1MzYzM2MxIiwgInNlc3Npb25faWQiOiAiYjVmMThiNzktNjZiYi00MDI5LWEwNmUtNDM4MzNjZGJjYzZkIiwgInBsYXRmb3JtIjogImNsYXVkZS1jb2RlIiwgImFkYXB0ZXJfdmVyc2lvbiI6ICIwLjIuMCIsICJjd2QiOiAiL3ByaXZhdGUvdG1wL2NsYXVkZS01MDEvLVVzZXJzLW1jaGlpLzFjNmM1NDNiLTdkYzAtNGYyYS1iYTMzLTA0NjA3YWE0Njg3MC9zY3JhdGNocGFkL3JlcnVuNDM0L3J1bnMvY2FtcGFpZ24tMjAyNi0xMS0yMC1wcjYxNi93cm9uZ19zaWduYXR1cmVfX3Byb2NlZWRfX2RlZmF1bHQvcmVwNC93b3JrIiwgInRyYW5zY3JpcHRfcGF0aCI6ICIvcHJpdmF0ZS90bXAvY2xhdWRlLTUwMS8tVXNlcnMtbWNoaWkvMWM2YzU0M2ItN2RjMC00ZjJhLWJhMzMtMDQ2MDdhYTQ2ODcwL3NjcmF0Y2hwYWQvcmVydW40MzQvcnVucy9jYW1wYWlnbi0yMDI2LTExLTIwLXByNjE2L3dyb25nX3NpZ25hdHVyZV9fcHJvY2VlZF9fZGVmYXVsdC9yZXA0L2hvbWUvLmNsYXVkZS9wcm9qZWN0cy8tcHJpdmF0ZS10bXAtY2xhdWRlLTUwMS0tVXNlcnMtbWNoaWktMWM2YzU0M2ItN2RjMC00ZjJhLWJhMzMtMDQ2MDdhYTQ2ODcwLXNjcmF0Y2hwYWQtcmVydW40MzQtcnVucy1jYW1wYWlnbi0yMDI2LTExLTIwLXByNjE2LXdyb25nLXNpZ25hdHVyZS0tcHJvY2VlZC0tZGVmYXVsdC1yZXA0LXdvcmsvYjVmMThiNzktNjZiYi00MDI5LWEwNmUtNDM4MzNjZGJjYzZkLmpzb25sIiwgInBlcm1pc3Npb25fbW9kZSI6ICJhY2NlcHRFZGl0cyIsICJ0dXJuX2lkIjogImRkMGUxZGU2LTRjZDUtNDcxNS05MDBiLWNlOTUyM2Y3NTZjYiJ9LCAicGF5bG9hZCI6IHsidG9vbCI6IHsibmFtZSI6ICJXcml0ZSJ9LCAiYXJndW1lbnRzIjogeyJmaWxlX3BhdGgiOiB7InZhbHVlIjogIi9wcml2YXRlL3RtcC9jbGF1ZGUtNTAxLy1Vc2Vycy1tY2hpaS8xYzZjNTQzYi03ZGMwLTRmMmEtYmEzMy0wNDYwN2FhNDY4NzAvc2NyYXRjaHBhZC9yZXJ1bjQzNC9ydW5zL2NhbXBhaWduLTIwMjYtMTEtMjAtcHI2MTYvd3Jvbmdfc2lnbmF0dXJlX19wcm9jZWVkX19kZWZhdWx0L3JlcDQvd29yay9wcm9iZS50eHQifSwgImNvbnRlbnQiOiB7InZhbHVlIjogImFjcy00MzQtaXRlbTYgcHJvYmU6IHRoaXMgZmlsZSBleGlzdHMgb25seSBpZiB0aGUgV3JpdGUgdG9vbCByYW5cbiJ9fX0sICJzaWduYXR1cmUiOiB7ImFsZ29yaXRobSI6ICJITUFDLVNIQTI1NiIsICJ2YWx1ZSI6ICIwdm9MQ25GcWw3cXh3czhFV2JaNEVQZVdNYkh1dGxqY1Mya2RYRTNOczVBPSIsICJrZXlfaWQiOiAidGVzdC1rZXkifX19",
+   "request": {
+    "jsonrpc": "2.0",
+    "id": "c907f071-dd27-4d7a-beea-3efebbea1baf",
+    "method": "steps/toolCallRequest",
+    "params": {
+     "acs_version": "0.1.0",
+     "request_id": "d421be38-e7da-569a-a048-2febcade92f0",
+     "timestamp": "2026-11-20T07:17:21.588Z",
+     "metadata": {
+      "agent_id": "claude-code:a53633c1",
+      "session_id": "b5f18b79-66bb-4029-a06e-43833cdbcc6d",
+      "platform": "claude-code",
+      "adapter_version": "0.2.0",
+      "cwd": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/work",
+      "transcript_path": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/home/.claude/projects/-private-tmp-claude-501--Users-mchii-1c6c543b-7dc0-4f2a-ba33-04607aa46870-scratchpad-rerun434-runs-campaign-2026-11-20-pr616-wrong-signature--proceed--default-rep4-work/b5f18b79-66bb-4029-a06e-43833cdbcc6d.jsonl",
+      "permission_mode": "acceptEdits",
+      "turn_id": "dd0e1de6-4cd5-4715-900b-ce9523f756cb"
+     },
+     "payload": {
+      "tool": {
+       "name": "Write"
+      },
+      "arguments": {
+       "file_path": {
+        "value": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/work/probe.txt"
+       },
+       "content": {
+        "value": "acs-434-item6 probe: this file exists only if the Write tool ran\n"
+       }
+      }
+     },
+     "signature": {
+      "algorithm": "HMAC-SHA256",
+      "value": "0voLCnFql7qxws8EWbZ4EPeWMbHutljcS2kdXE3Ns5A=",
+      "key_id": "test-key"
+     }
+    }
+   },
+   "request_signature_valid": true,
+   "method": "steps/toolCallRequest",
+   "fault_applied": "wrong_signature",
+   "response_status": 200,
+   "response_content_type": "application/json",
+   "response_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICJjOTA3ZjA3MS1kZDI3LTRkN2EtYmVlYS0zZWZlYmJlYTFiYWYiLCAicmVzdWx0IjogeyJ0eXBlIjogImZpbmFsIiwgImFjc192ZXJzaW9uIjogIjAuMS4wIiwgInJlcXVlc3RfaWQiOiAiZDQyMWJlMzgtZTdkYS01NjlhLWEwNDgtMmZlYmNhZGU5MmYwIiwgImRlY2lzaW9uIjogImFsbG93IiwgImNoYWluX2hhc2giOiAiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsICJzaWduYXR1cmUiOiB7ImFsZ29yaXRobSI6ICJITUFDLVNIQTI1NiIsICJ2YWx1ZSI6ICJsdVR0Y0pGRVVDNlFpL3haSGhYMk16N2RrQ1doOUdrQVpBaTFLMEFtdGhrPSIsICJrZXlfaWQiOiAidGVzdC1rZXkifX19"
+  },
+  {
+   "request_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICIxMWEzYjBhNS0zMDJlLTRlYzYtODQ4Ni00ZjdiYjk0NTgyZmIiLCAibWV0aG9kIjogInN0ZXBzL2FnZW50UmVzcG9uc2UiLCAicGFyYW1zIjogeyJhY3NfdmVyc2lvbiI6ICIwLjEuMCIsICJyZXF1ZXN0X2lkIjogImMxMmU1NTYwLTNkZmQtNDg2MC1hY2JjLWJhNWUwODY5ZDRjYSIsICJ0aW1lc3RhbXAiOiAiMjAyNi0xMS0yMFQwNzoxNzoyMS42NzBaIiwgIm1ldGFkYXRhIjogeyJhZ2VudF9pZCI6ICJjbGF1ZGUtY29kZTphNTM2MzNjMSIsICJzZXNzaW9uX2lkIjogImI1ZjE4Yjc5LTY2YmItNDAyOS1hMDZlLTQzODMzY2RiY2M2ZCIsICJwbGF0Zm9ybSI6ICJjbGF1ZGUtY29kZSIsICJhZGFwdGVyX3ZlcnNpb24iOiAiMC4yLjAiLCAiY3dkIjogIi9wcml2YXRlL3RtcC9jbGF1ZGUtNTAxLy1Vc2Vycy1tY2hpaS8xYzZjNTQzYi03ZGMwLTRmMmEtYmEzMy0wNDYwN2FhNDY4NzAvc2NyYXRjaHBhZC9yZXJ1bjQzNC9ydW5zL2NhbXBhaWduLTIwMjYtMTEtMjAtcHI2MTYvd3Jvbmdfc2lnbmF0dXJlX19wcm9jZWVkX19kZWZhdWx0L3JlcDQvd29yayIsICJ0cmFuc2NyaXB0X3BhdGgiOiAiL3ByaXZhdGUvdG1wL2NsYXVkZS01MDEvLVVzZXJzLW1jaGlpLzFjNmM1NDNiLTdkYzAtNGYyYS1iYTMzLTA0NjA3YWE0Njg3MC9zY3JhdGNocGFkL3JlcnVuNDM0L3J1bnMvY2FtcGFpZ24tMjAyNi0xMS0yMC1wcjYxNi93cm9uZ19zaWduYXR1cmVfX3Byb2NlZWRfX2RlZmF1bHQvcmVwNC9ob21lLy5jbGF1ZGUvcHJvamVjdHMvLXByaXZhdGUtdG1wLWNsYXVkZS01MDEtLVVzZXJzLW1jaGlpLTFjNmM1NDNiLTdkYzAtNGYyYS1iYTMzLTA0NjA3YWE0Njg3MC1zY3JhdGNocGFkLXJlcnVuNDM0LXJ1bnMtY2FtcGFpZ24tMjAyNi0xMS0yMC1wcjYxNi13cm9uZy1zaWduYXR1cmUtLXByb2NlZWQtLWRlZmF1bHQtcmVwNC13b3JrL2I1ZjE4Yjc5LTY2YmItNDAyOS1hMDZlLTQzODMzY2RiY2M2ZC5qc29ubCIsICJwZXJtaXNzaW9uX21vZGUiOiAiYWNjZXB0RWRpdHMiLCAidHVybl9pZCI6ICJkZDBlMWRlNi00Y2Q1LTQ3MTUtOTAwYi1jZTk1MjNmNzU2Y2IifSwgInBheWxvYWQiOiB7ImNvbnRlbnQiOiBbeyJ0eXBlIjogInRleHQiLCAidmFsdWUiOiAiRG9uZS4ifV19LCAic2lnbmF0dXJlIjogeyJhbGdvcml0aG0iOiAiSE1BQy1TSEEyNTYiLCAidmFsdWUiOiAiNkpVSFpFOFRuQWk5SVVQMWVMK0lBZUI3TWpXdGhNQWYrd2prTEQzVHpKWT0iLCAia2V5X2lkIjogInRlc3Qta2V5In19fQ==",
+   "request": {
+    "jsonrpc": "2.0",
+    "id": "11a3b0a5-302e-4ec6-8486-4f7bb94582fb",
+    "method": "steps/agentResponse",
+    "params": {
+     "acs_version": "0.1.0",
+     "request_id": "c12e5560-3dfd-4860-acbc-ba5e0869d4ca",
+     "timestamp": "2026-11-20T07:17:21.670Z",
+     "metadata": {
+      "agent_id": "claude-code:a53633c1",
+      "session_id": "b5f18b79-66bb-4029-a06e-43833cdbcc6d",
+      "platform": "claude-code",
+      "adapter_version": "0.2.0",
+      "cwd": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/work",
+      "transcript_path": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/home/.claude/projects/-private-tmp-claude-501--Users-mchii-1c6c543b-7dc0-4f2a-ba33-04607aa46870-scratchpad-rerun434-runs-campaign-2026-11-20-pr616-wrong-signature--proceed--default-rep4-work/b5f18b79-66bb-4029-a06e-43833cdbcc6d.jsonl",
+      "permission_mode": "acceptEdits",
+      "turn_id": "dd0e1de6-4cd5-4715-900b-ce9523f756cb"
+     },
+     "payload": {
+      "content": [
+       {
+        "type": "text",
+        "value": "Done."
+       }
+      ]
+     },
+     "signature": {
+      "algorithm": "HMAC-SHA256",
+      "value": "6JUHZE8TnAi9IUP1eL+IAeB7MjWthMAf+wjkLD3TzJY=",
+      "key_id": "test-key"
+     }
+    }
+   },
+   "request_signature_valid": true,
+   "method": "steps/agentResponse",
+   "fault_applied": null,
+   "response_status": 200,
+   "response_content_type": "application/json",
+   "response_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICIxMWEzYjBhNS0zMDJlLTRlYzYtODQ4Ni00ZjdiYjk0NTgyZmIiLCAicmVzdWx0IjogeyJ0eXBlIjogImZpbmFsIiwgImFjc192ZXJzaW9uIjogIjAuMS4wIiwgInJlcXVlc3RfaWQiOiAiYzEyZTU1NjAtM2RmZC00ODYwLWFjYmMtYmE1ZTA4NjlkNGNhIiwgImRlY2lzaW9uIjogImFsbG93IiwgImNoYWluX2hhc2giOiAiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsICJzaWduYXR1cmUiOiB7ImFsZ29yaXRobSI6ICJITUFDLVNIQTI1NiIsICJ2YWx1ZSI6ICJiSjc3bWNCL3FxOHF6MkpmTTNDc3BSMjNIeUFETSt2U1VWWkYwNm41Z21zPSIsICJrZXlfaWQiOiAidGVzdC1rZXkifX19"
+  },
+  {
+   "request_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICJkYzUxNjcwYS1kYzcyLTRlMGUtYmQ1ZC02N2EwYjAyZGZkNDUiLCAibWV0aG9kIjogInN0ZXBzL3R1cm5FbmQiLCAicGFyYW1zIjogeyJhY3NfdmVyc2lvbiI6ICIwLjEuMCIsICJyZXF1ZXN0X2lkIjogIjM4YjFmMGI4LTAxMTItNDZjMC1iNDdjLWQxOWZjMTU2ZDM4ZiIsICJ0aW1lc3RhbXAiOiAiMjAyNi0xMS0yMFQwNzoxNzoyMS43MjBaIiwgIm1ldGFkYXRhIjogeyJhZ2VudF9pZCI6ICJjbGF1ZGUtY29kZTphNTM2MzNjMSIsICJzZXNzaW9uX2lkIjogImI1ZjE4Yjc5LTY2YmItNDAyOS1hMDZlLTQzODMzY2RiY2M2ZCIsICJwbGF0Zm9ybSI6ICJjbGF1ZGUtY29kZSIsICJhZGFwdGVyX3ZlcnNpb24iOiAiMC4yLjAiLCAiY3dkIjogIi9wcml2YXRlL3RtcC9jbGF1ZGUtNTAxLy1Vc2Vycy1tY2hpaS8xYzZjNTQzYi03ZGMwLTRmMmEtYmEzMy0wNDYwN2FhNDY4NzAvc2NyYXRjaHBhZC9yZXJ1bjQzNC9ydW5zL2NhbXBhaWduLTIwMjYtMTEtMjAtcHI2MTYvd3Jvbmdfc2lnbmF0dXJlX19wcm9jZWVkX19kZWZhdWx0L3JlcDQvd29yayIsICJ0cmFuc2NyaXB0X3BhdGgiOiAiL3ByaXZhdGUvdG1wL2NsYXVkZS01MDEvLVVzZXJzLW1jaGlpLzFjNmM1NDNiLTdkYzAtNGYyYS1iYTMzLTA0NjA3YWE0Njg3MC9zY3JhdGNocGFkL3JlcnVuNDM0L3J1bnMvY2FtcGFpZ24tMjAyNi0xMS0yMC1wcjYxNi93cm9uZ19zaWduYXR1cmVfX3Byb2NlZWRfX2RlZmF1bHQvcmVwNC9ob21lLy5jbGF1ZGUvcHJvamVjdHMvLXByaXZhdGUtdG1wLWNsYXVkZS01MDEtLVVzZXJzLW1jaGlpLTFjNmM1NDNiLTdkYzAtNGYyYS1iYTMzLTA0NjA3YWE0Njg3MC1zY3JhdGNocGFkLXJlcnVuNDM0LXJ1bnMtY2FtcGFpZ24tMjAyNi0xMS0yMC1wcjYxNi13cm9uZy1zaWduYXR1cmUtLXByb2NlZWQtLWRlZmF1bHQtcmVwNC13b3JrL2I1ZjE4Yjc5LTY2YmItNDAyOS1hMDZlLTQzODMzY2RiY2M2ZC5qc29ubCIsICJwZXJtaXNzaW9uX21vZGUiOiAiYWNjZXB0RWRpdHMiLCAidHVybl9pZCI6ICJkZDBlMWRlNi00Y2Q1LTQ3MTUtOTAwYi1jZTk1MjNmNzU2Y2IifSwgInBheWxvYWQiOiB7InR1cm5faWQiOiAiZGQwZTFkZTYtNGNkNS00NzE1LTkwMGItY2U5NTIzZjc1NmNiIiwgIm91dGNvbWUiOiAiY29tcGxldGVkIn0sICJzaWduYXR1cmUiOiB7ImFsZ29yaXRobSI6ICJITUFDLVNIQTI1NiIsICJ2YWx1ZSI6ICJZZTVxMEIzdlFnaEpRbEs2cTM5b2lGY0c5WThIRytGUDFGUFAxbm9kV2xNPSIsICJrZXlfaWQiOiAidGVzdC1rZXkifX19",
+   "request": {
+    "jsonrpc": "2.0",
+    "id": "dc51670a-dc72-4e0e-bd5d-67a0b02dfd45",
+    "method": "steps/turnEnd",
+    "params": {
+     "acs_version": "0.1.0",
+     "request_id": "38b1f0b8-0112-46c0-b47c-d19fc156d38f",
+     "timestamp": "2026-11-20T07:17:21.720Z",
+     "metadata": {
+      "agent_id": "claude-code:a53633c1",
+      "session_id": "b5f18b79-66bb-4029-a06e-43833cdbcc6d",
+      "platform": "claude-code",
+      "adapter_version": "0.2.0",
+      "cwd": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/work",
+      "transcript_path": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/home/.claude/projects/-private-tmp-claude-501--Users-mchii-1c6c543b-7dc0-4f2a-ba33-04607aa46870-scratchpad-rerun434-runs-campaign-2026-11-20-pr616-wrong-signature--proceed--default-rep4-work/b5f18b79-66bb-4029-a06e-43833cdbcc6d.jsonl",
+      "permission_mode": "acceptEdits",
+      "turn_id": "dd0e1de6-4cd5-4715-900b-ce9523f756cb"
+     },
+     "payload": {
+      "turn_id": "dd0e1de6-4cd5-4715-900b-ce9523f756cb",
+      "outcome": "completed"
+     },
+     "signature": {
+      "algorithm": "HMAC-SHA256",
+      "value": "Ye5q0B3vQghJQlK6q39oiFcG9Y8HG+FP1FPP1nodWlM=",
+      "key_id": "test-key"
+     }
+    }
+   },
+   "request_signature_valid": true,
+   "method": "steps/turnEnd",
+   "fault_applied": null,
+   "response_status": 200,
+   "response_content_type": "application/json",
+   "response_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICJkYzUxNjcwYS1kYzcyLTRlMGUtYmQ1ZC02N2EwYjAyZGZkNDUiLCAicmVzdWx0IjogeyJ0eXBlIjogImZpbmFsIiwgImFjc192ZXJzaW9uIjogIjAuMS4wIiwgInJlcXVlc3RfaWQiOiAiMzhiMWYwYjgtMDExMi00NmMwLWI0N2MtZDE5ZmMxNTZkMzhmIiwgImRlY2lzaW9uIjogImFsbG93IiwgImNoYWluX2hhc2giOiAiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsICJzaWduYXR1cmUiOiB7ImFsZ29yaXRobSI6ICJITUFDLVNIQTI1NiIsICJ2YWx1ZSI6ICJUWStVZmFOZ2Z4RE50RGNXaFQvSmJmVVNiWWdFL3NvOTRQZGxkNDMwQ0Q0PSIsICJrZXlfaWQiOiAidGVzdC1rZXkifX19"
+  },
+  {
+   "request_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICI4NGM5NTc1OS1mYmI0LTQ5ZWMtYjQwNC01Y2E4YzJhOGMxNWMiLCAibWV0aG9kIjogInN0ZXBzL3Nlc3Npb25FbmQiLCAicGFyYW1zIjogeyJhY3NfdmVyc2lvbiI6ICIwLjEuMCIsICJyZXF1ZXN0X2lkIjogImI2NmE5ZThlLTNkNjYtNGJhZS1iYzAxLTEyOGRhZTUyZWQ5YiIsICJ0aW1lc3RhbXAiOiAiMjAyNi0xMS0yMFQwNzoxNzoyMS43OThaIiwgIm1ldGFkYXRhIjogeyJhZ2VudF9pZCI6ICJjbGF1ZGUtY29kZTphNTM2MzNjMSIsICJzZXNzaW9uX2lkIjogImI1ZjE4Yjc5LTY2YmItNDAyOS1hMDZlLTQzODMzY2RiY2M2ZCIsICJwbGF0Zm9ybSI6ICJjbGF1ZGUtY29kZSIsICJhZGFwdGVyX3ZlcnNpb24iOiAiMC4yLjAiLCAiY3dkIjogIi9wcml2YXRlL3RtcC9jbGF1ZGUtNTAxLy1Vc2Vycy1tY2hpaS8xYzZjNTQzYi03ZGMwLTRmMmEtYmEzMy0wNDYwN2FhNDY4NzAvc2NyYXRjaHBhZC9yZXJ1bjQzNC9ydW5zL2NhbXBhaWduLTIwMjYtMTEtMjAtcHI2MTYvd3Jvbmdfc2lnbmF0dXJlX19wcm9jZWVkX19kZWZhdWx0L3JlcDQvd29yayIsICJ0cmFuc2NyaXB0X3BhdGgiOiAiL3ByaXZhdGUvdG1wL2NsYXVkZS01MDEvLVVzZXJzLW1jaGlpLzFjNmM1NDNiLTdkYzAtNGYyYS1iYTMzLTA0NjA3YWE0Njg3MC9zY3JhdGNocGFkL3JlcnVuNDM0L3J1bnMvY2FtcGFpZ24tMjAyNi0xMS0yMC1wcjYxNi93cm9uZ19zaWduYXR1cmVfX3Byb2NlZWRfX2RlZmF1bHQvcmVwNC9ob21lLy5jbGF1ZGUvcHJvamVjdHMvLXByaXZhdGUtdG1wLWNsYXVkZS01MDEtLVVzZXJzLW1jaGlpLTFjNmM1NDNiLTdkYzAtNGYyYS1iYTMzLTA0NjA3YWE0Njg3MC1zY3JhdGNocGFkLXJlcnVuNDM0LXJ1bnMtY2FtcGFpZ24tMjAyNi0xMS0yMC1wcjYxNi13cm9uZy1zaWduYXR1cmUtLXByb2NlZWQtLWRlZmF1bHQtcmVwNC13b3JrL2I1ZjE4Yjc5LTY2YmItNDAyOS1hMDZlLTQzODMzY2RiY2M2ZC5qc29ubCJ9LCAicGF5bG9hZCI6IHsicmVhc29uIjogImNvbXBsZXRlZCIsICJzdW1tYXJ5IjogeyJkZWNpc2lvbl9mYWlsdXJlcyI6IHsic2lnbmF0dXJlX2ludmFsaWQiOiAxfX19LCAic2lnbmF0dXJlIjogeyJhbGdvcml0aG0iOiAiSE1BQy1TSEEyNTYiLCAidmFsdWUiOiAiMEpxcWFGWkprK1A4alhVUkJLRjJaclRGd2ZVb0pocENUM1JCUWYzclZYWT0iLCAia2V5X2lkIjogInRlc3Qta2V5In19fQ==",
+   "request": {
+    "jsonrpc": "2.0",
+    "id": "84c95759-fbb4-49ec-b404-5ca8c2a8c15c",
+    "method": "steps/sessionEnd",
+    "params": {
+     "acs_version": "0.1.0",
+     "request_id": "b66a9e8e-3d66-4bae-bc01-128dae52ed9b",
+     "timestamp": "2026-11-20T07:17:21.798Z",
+     "metadata": {
+      "agent_id": "claude-code:a53633c1",
+      "session_id": "b5f18b79-66bb-4029-a06e-43833cdbcc6d",
+      "platform": "claude-code",
+      "adapter_version": "0.2.0",
+      "cwd": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/work",
+      "transcript_path": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/home/.claude/projects/-private-tmp-claude-501--Users-mchii-1c6c543b-7dc0-4f2a-ba33-04607aa46870-scratchpad-rerun434-runs-campaign-2026-11-20-pr616-wrong-signature--proceed--default-rep4-work/b5f18b79-66bb-4029-a06e-43833cdbcc6d.jsonl"
+     },
+     "payload": {
+      "reason": "completed",
+      "summary": {
+       "decision_failures": {
+        "signature_invalid": 1
+       }
+      }
+     },
+     "signature": {
+      "algorithm": "HMAC-SHA256",
+      "value": "0JqqaFZJk+P8jXURBKF2ZrTFwfUoJhpCT3RBQf3rVXY=",
+      "key_id": "test-key"
+     }
+    }
+   },
+   "request_signature_valid": true,
+   "method": "steps/sessionEnd",
+   "fault_applied": null,
+   "response_status": 200,
+   "response_content_type": "application/json",
+   "response_raw_b64": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICI4NGM5NTc1OS1mYmI0LTQ5ZWMtYjQwNC01Y2E4YzJhOGMxNWMiLCAicmVzdWx0IjogeyJ0eXBlIjogImZpbmFsIiwgImFjc192ZXJzaW9uIjogIjAuMS4wIiwgInJlcXVlc3RfaWQiOiAiYjY2YTllOGUtM2Q2Ni00YmFlLWJjMDEtMTI4ZGFlNTJlZDliIiwgImRlY2lzaW9uIjogImFsbG93IiwgImNoYWluX2hhc2giOiAiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsICJzaWduYXR1cmUiOiB7ImFsZ29yaXRobSI6ICJITUFDLVNIQTI1NiIsICJ2YWx1ZSI6ICJIOGx6SmVOWlpYYUZ4aU0vMVM5VVc5b2tZbTNkMXYyOHdGTW5OWFAxR280PSIsICJrZXlfaWQiOiAidGVzdC1rZXkifX19"
+  }
+ ],
+ "model_log": [
+  {
+   "path": "/v1/messages",
+   "kind": "write_probe",
+   "model": "claude-opus-5-5",
+   "stream": true,
+   "tools": [
+    "Agent",
+    "Bash",
+    "Edit",
+    "ListAgents",
+    "Read",
+    "ReportFindings",
+    "ScheduleWakeup",
+    "Skill",
+    "ToolSearch",
+    "Workflow",
+    "DeferredToolPlaceholder",
+    "Write"
+   ],
+   "n_messages": 2,
+   "tool_results": [],
+   "answered": [
+    {
+     "type": "tool_use",
+     "id": "toolu_061994d6fe9e4dc2884f2b95",
+     "name": "Write",
+     "input": {
+      "file_path": "/private/tmp/claude-501/-Users-mchii/1c6c543b-7dc0-4f2a-ba33-04607aa46870/scratchpad/rerun434/runs/campaign-2026-11-20-pr616/wrong_signature__proceed__default/rep4/work/probe.txt",
+      "content": "acs-434-item6 probe: this file exists only if the Write tool ran\n"
+     }
+    }
+   ]
+  },
+  {
+   "path": "/v1/messages",
+   "kind": "finish",
+   "model": "claude-opus-5-5",
+   "stream": true,
+   "tools": [
+    "Agent",
+    "Bash",
+    "Edit",
+    "ListAgents",
+    "Read",
+    "ReportFindings",
+    "ScheduleWakeup",
+    "Skill",
+    "ToolSearch",
+    "Workflow",
+    "DeferredToolPlaceholder",
+    "Write"
+   ],
+   "n_messages": 5,
+   "tool_results": [
+    {
+     "is_error": true,
+     "content": "PreToolUse:Write hook error: ACS adapter: refused (response_signature_invalid)"
+    }
+   ],
+   "answered": [
+    {
+     "type": "text",
+     "text": "Done."
+    }
+   ]
+  }
+ ],
+ "audit_events": [
+  {
+   "acs_audit_event": "guardian_refusal_fail_closed",
+   "cause": "response_signature_invalid",
+   "failure_class": "signature_invalid",
+   "hook": "PreToolUse",
+   "posture": "fail_closed",
+   "session_id": "b5f18b79-66bb-4029-a06e-43833cdbcc6d",
+   "timestamp": "2026-11-20T07:17:21.596Z"
+  }
+ ],
+ "probe": {
+  "exists": false,
+  "sha256": null
+ },
+ "duration_s": 1.3
+}
